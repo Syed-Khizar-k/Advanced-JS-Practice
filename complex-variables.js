@@ -118,3 +118,28 @@ Write a program that asks for the user's name using prompt() and displays a gree
 
 let user = prompt("what is your name?");
 alert(`hello  ${user}`);
+
+//simple calculator task :
+/*
+Ask the user for two numbers using prompt().
+Perform addition, subtraction, multiplication, and division on these numbers.
+Display the results using alert().
+*/
+
+let input1 = prompt(`Enter first number :`);
+let input2 = prompt(`Enter second number :`);
+
+let add = input1 + input2;
+let sub = input1 - input2;
+let multi = input1 * input2;
+let divi = input1 / input2;
+alert(
+  "Addition: " +
+    add +
+    "\nSubtraction: " +
+    sub +
+    "\nMultiplication: " +
+    multi +
+    "\nDivision: " +
+    divi
+);
