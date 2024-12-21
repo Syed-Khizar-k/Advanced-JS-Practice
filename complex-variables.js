@@ -111,3 +111,10 @@ console.log(arithmetic2);
 let arithmetic3 = (var1 + va + vb) * var1;
 console.log(arithmetic3);
 
+//Greeting Message Task:
+/*
+Write a program that asks for the user's name using prompt() and displays a greeting message using alert().
+*/
+
+let user = prompt("what is your name?");
+alert(`hello  ${user}`);
