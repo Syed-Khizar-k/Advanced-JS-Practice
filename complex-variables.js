@@ -48,7 +48,7 @@ Store your full name and favorite quote in variables. Combine them to print a me
 Calculate and print the total number of characters in your favorite quote.
 */
 
-console.log("Welcome! syed khizar ");
+// console.log("Welcome! syed khizar ");
 let fullName = "syed khizar";
 let favouriteQuote = "Dont give the brush of your life to others !";
 
@@ -56,3 +56,58 @@ let message = fullName + " " + favouriteQuote;
 console.log(message);
 
 console.log(favouriteQuote.length);
+
+//Part 2 Starts Here
+/*
+Task 1: 
+Create 10 variables using different declarations (var, let, and const) to store numbers.
+Calculate the SUM of all numbers and print the result.
+Find the AVERAGE and print the result.
+Multiply all numbers and print the PRODUCT.
+Identify the largest and smallest numbers among them and print the results.
+*/
+
+let var1 = 10,
+  va = 20,
+  vb = 30,
+  vc = 40;
+
+var vd = 10,
+  ve = 20,
+  vf = 30;
+
+const vg = 10,
+  vh = 20,
+  vi = 30;
+//sum of all the nyumbers
+let sum = var1 + va + vb + vc + vd + ve + vf + vg + vh + vi;
+console.log(sum);
+//average of all the numbers
+let average = sum / 10;
+console.log(average);
+//product of all the numbers
+let product = var1 * va * vb * vc * vd * ve * vf * vg * vh * vi;
+console.log(product);
+//identifying largest number
+let largestNumber = Math.max(var1, va, vb, vc, vd, ve, vf, vg, vh, vi);
+console.log(largestNumber);
+//identifying Smallest number
+let SmallestNumber = Math.min(var1, va, vb, vc, vd, ve, vf, vg, vh, vi);
+console.log(SmallestNumber);
+
+/*
+Task 2: Perform complex arithmetic operations:
+Add two numbers, multiply the result by a third number, and print the final result.
+Subtract one number from another and raise it to the power of a third number.
+Add three numbers together, divide by another number, and print the result.
+
+*/
+let arithmetic1 = (var1 + va) * vb;
+console.log(arithmetic1);
+
+let arithmetic2 = Math.pow(va - var1, 2);
+console.log(arithmetic2);
+
+let arithmetic3 = (var1 + va + vb) * var1;
+console.log(arithmetic3);
+
