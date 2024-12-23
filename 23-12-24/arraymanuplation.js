@@ -1,13 +1,4 @@
-/*
-SECTION 1: 
-Create an array with at least 5 numbers and:
-....Display the numbers: 
-....Add a new number to the end of the array.
-....Remove the first number from the array.
-Create an array of 5 strings and:
-...Display the strings.
-...Sort the array alphabetically without using functions.
-*/
+//ARRAYS MANUPLATIONS WITHOUT FUNCTIONS
 
 //1:Create an array with at least 5 numbers and display numbers
 let arrayOfNumbers = [1, 2, 3, 4, 5];
@@ -52,3 +43,54 @@ SECTION 2:
 
 let numbers = [1, 2, 3, 3, 4, 4, 5, 6];
 
+let uniqueNumbers = [];
+for (let i = 0; i < numbers.length; i++) {
+  let isDublicate = false;
+  for (let j = 0; j < uniqueNumbers.length; j++) {
+    if (numbers[i] === uniqueNumbers[j]) {
+      isDublicate = true;
+      break;
+    }
+  }
+
+  if (!isDublicate) {
+    uniqueNumbers[uniqueNumbers.length] = numbers[i];
+  }
+}
+console.log(uniqueNumbers);
+
+//7: Create an array of numbers and find the largest and smallest number manually.
+
+let input = [3, 7, 2, 8, 5, 10, 1]; // Input array
+
+// Initialize largest and smallest with the first element
+let largest = input[0];
+let smallest = input[0];
+
+// Loop through the array to find largest and smallest numbers
+for (let i = 1; i < input.length; i++) {
+  if (input[i] > largest) {
+    largest = input[i];
+  }
+  if (input[i] < smallest) {
+    smallest = input[i];
+  }
+}
+
+console.log(`Largest : ${largest}`);
+console.log(`Smallest : ${smallest}`);
+
+//8:Reverse an array without using built-in functions (manually rearrange the elements).
+
+let arr = [1, 2, 3, 4, 5];
+let n = arr.length;
+
+// reversing the array using a loop
+for (let i = 0; i < n / 2; i++) {
+  //swaping
+  let temp = arr[i];
+  arr[i] = arr[n - 1 - i];
+  arr[n - 1 - i] = temp;
+}
+
+console.log(arr);
