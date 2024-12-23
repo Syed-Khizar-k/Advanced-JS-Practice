@@ -94,3 +94,14 @@ for (let i = 0; i < n / 2; i++) {
 }
 
 console.log(arr);
+
+//9:Create two arrays of equal length. Combine them into a single array by alternately taking elements from each array
+let array1 = [1, 2, 3, 4];
+let array2 = ["a", "b", "c", "d"];
+
+let mixed = [];
+for (let i = 0; i < array1.length; i++) {
+  mixed.push(array1[i]);
+  mixed.push(array2[i]);
+}
+console.log(mixed);
