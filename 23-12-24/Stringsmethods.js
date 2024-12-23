@@ -87,4 +87,5 @@ let modifiedlongSentence = longSentence.replace(
   ReplacementWord
 );
 
+
 console.log(modifiedlongSentence);
