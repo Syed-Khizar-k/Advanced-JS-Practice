@@ -140,5 +140,32 @@ function generatePattern(num) {
     console.log(pattern);
   }
 }
-generatePattern(5);
+// generatePattern(5);
 
+/*
+Task 5: Number Guessing Game
+Write a function guessNumber() that generates a random number between 1 and 100 and allows the user to guess it. Provide feedback (too high/too low) until the user guesses correctly.
+
+*/
+
+function guessNumber() {
+  //for random numbers
+  let randomNum = Math.floor(Math.random() * 100) + 6;
+  let guess = 0;
+
+  console.log("Enter Your Guess(1-100) !");
+  while (guess !== randomNum) {
+    guess = parseInt(prompt(`Enter Your Guess : `));
+
+    if (guess > randomNum) {
+      console.log("too high");
+    } else if (guess < randomNum) {
+      console.log("too low");
+    } else {
+      console.log(`congrats You win! the number was : ${randomNum}`);
+      break;
+    }
+  }
+}
+
+guessNumber();
