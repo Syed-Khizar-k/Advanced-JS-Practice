@@ -119,4 +119,26 @@ function menuDrivenProgram() {
   }
 }
 
-menuDrivenProgram();
+// menuDrivenProgram();
+
+/*
+Task 4: Generate a Pattern
+Write a function generatePattern() that prints the following pattern:
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+*/
+
+function generatePattern(num) {
+  for (let i = 1; i <= num; i++) {
+    let pattern = "";
+    for (let j = 1; j <= i; j++) {
+      pattern += j;
+    }
+    console.log(pattern);
+  }
+}
+generatePattern(5);
+
