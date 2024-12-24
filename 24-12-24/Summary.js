@@ -54,4 +54,69 @@ function arrayOperations(numbers) {
   }
   console.log(numbers);
 }
-arrayOperations([5, 2, 4, 3, 4, 1, 5]);
+// arrayOperations([5, 2, 4, 3, 4, 1, 5]);
+
+/*
+Task 3: Menu-Driven Program
+Create a menu-driven program with the following options:
+1:Perform string operations.
+2:Perform number operations (e.g., find GCD, check prime).
+3:Perform array operations.
+4:Perform arithmetic operations (calculator).
+5:Exit the program.
+...Use a switch statement for menu navigation and loops to keep the program running until the user exits.
+
+*/
+
+function menuDrivenProgram() {
+  let choice;
+  do {
+    console.log("------Menu-----");
+    console.log("1.Perform string operations");
+    console.log("2:Perform number operations");
+    console.log("3:Perform array operations");
+    console.log("4:Perform arithmetic operations");
+    console.log("5:Exit the program");
+
+    choice = parseInt(prompt("Select option between (1-5)"));
+
+    switch (choice) {
+      case 1:
+        stringOperations("hello khizar");
+        break;
+
+      case 2:
+        arrayOperations([5, 2, 4, 3, 4, 1, 5]);
+        break;
+
+      case 3:
+        arrayOperations([5, 2, 4, 3, 4, 1, 5]);
+        break;
+
+      case 4:
+        arithematic(10, 12);
+        break;
+
+      case 5:
+        console.log("Exited Successfully -----");
+
+        break;
+
+      default:
+        console.log("please enter correct option");
+
+        break;
+    }
+  } while (choice !== 5);
+
+  function arithematic() {
+    nm1 = parseInt(prompt("Enter first number : "));
+    nm2 = parseInt(prompt("Enter second number : "));
+    console.log(nm1 + nm2);
+    console.log(nm1 - nm2);
+    console.log(nm1 / nm2);
+    console.log(nm1 % nm2);
+  }
+}
+
+menuDrivenProgram();
