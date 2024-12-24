@@ -168,4 +168,61 @@ function guessNumber() {
   }
 }
 
-guessNumber();
+// guessNumber();
+
+/*
+Task 25: Mini Database
+Create an array of objects to represent a database of books (title, author, genre, availability). Write functions to:
+Add a new book.
+Search for a book by title or author.
+List all available books.
+Update the availability of a book.
+*/
+let booksData = [
+  { title: "Power", author: "syed khizar", availablity: "available" },
+  { title: "Magic", author: "umar", availablity: "available" },
+  { title: "Law", author: "usama", availablity: "available" },
+  { title: "Power", author: "john", availablity: "available" },
+  { title: "Worse", author: "summi", availablity: "out of stock" },
+  { title: "Mern", author: "ali", availablity: "available" },
+];
+//Search for a book by title or author.
+function searchBook() {
+  title = prompt("Enter the title of Book : ");
+  author = prompt("Who is the author of Book");
+  for (let i = 0; i < booksData.length; i++) {
+    if (title === booksData[i].title || author === booksData[i].author) {
+      console.log(booksData[i]);
+    } else {
+      console.log("Book is not available");
+    }
+  }
+}
+searchBook();
+
+//List all available books.
+function availableBooks() {
+  console.log(booksData);
+}
+availableBooks();
+
+//Add a new book.
+function addBook() {
+  let title, author, availablity;
+  let newBook = {
+    title: title,
+    author: author,
+    availablity: availablity,
+  };
+  newBook.title = prompt("Enter Title Of Book: ");
+  newBook.author = prompt("Enter Author name Of Book: ");
+  newBook.availablity = prompt("Availability Status: ");
+
+  booksData.push(newBook);
+}
+addBook();
+
+//Update the availability of a book.
+function update() {
+  availability = prompt("Enter the Status to update ");
+}
