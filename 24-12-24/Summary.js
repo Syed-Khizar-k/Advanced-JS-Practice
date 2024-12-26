@@ -224,5 +224,9 @@ addBook();
 
 //Update the availability of a book.
 function update() {
-  availability = prompt("Enter the Status to update ");
+  let i = 0;
+  let availability = prompt("Enter the Status to update ");
+  booksData[i].availablity = availability;
+  console.log(booksData[i]);
 }
+update();
