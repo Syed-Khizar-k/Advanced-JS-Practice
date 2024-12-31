@@ -33,17 +33,24 @@ Write a function calculateRange() that calculates the range (difference between 
 */
 
 function calculateRange() {
-  let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  let maxNum = array.reduce(
-    (acc, currVal) => (acc > currVal ? acc : currVal),
-    -Infinity
-  );
-  let minNum = array.reduce(
-    (acc, currVal) => (acc < currVal ? acc : currVal),
-    Infinity
-  );
+  try {
+    let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    if (array.length === 0) {
+      throw new Error("Array is empty ! can not calculate range ");
+    }
+    let maxNum = array.reduce(
+      (acc, currVal) => (acc > currVal ? acc : currVal),
+      -Infinity
+    );
+    let minNum = array.reduce(
+      (acc, currVal) => (acc < currVal ? acc : currVal),
+      Infinity
+    );
 
-  let range = maxNum - minNum;
-  console.log(range);
+    let range = maxNum - minNum;
+    console.log(range);
+  } catch (error) {
+    console.log("Error : ", error.message);
+  }
 }
-// calculateRange();
+calculateRange();
