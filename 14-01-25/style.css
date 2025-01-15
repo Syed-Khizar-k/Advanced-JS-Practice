@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.curosal {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  
+}
+
+.inner-curosal {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.inner-items {
+  min-width: 100%;
+  /* transform translate property will apply here  */
+  /* transform: translateX(-200%); */
+  transition: transform 1s ease-in-out;
+}
+
+.inner-items img {
+  height: 100vh;
+  min-width: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: relative;
+}
+
+.crusals-btns {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+}
+.btn-next {
+  left: 20px;
+  border: none;
+  font-size: 48px;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  background: none;
+  color: white;
+  font-weight: 900;
+}
+.btn-previous {
+  right: 20px;
+  border: none;
+  font-size: 48px;
+  font-weight: 900;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  background: none;
+  color: white;
+}
+.dots-container {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.active {
+  background-color: #333;
+}
+
+@media (max-width: 768px) {
+  .inner-items {
+    height: 50vh;
+  }
+  .inner-items img {
+    height: 100%;
+    min-width: 100%;
+    object-fit: fill;
+    object-position: center;
+  }
+  .crusals-btns {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+
+    width: 100%;
+    top: 20vh;
+  }
+}
